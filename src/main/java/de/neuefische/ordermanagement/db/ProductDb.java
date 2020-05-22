@@ -1,6 +1,8 @@
 package de.neuefische.ordermanagement.db;
 
 
+import de.neuefische.ordermanagement.model.NonPerishable;
+import de.neuefische.ordermanagement.model.Perischable;
 import de.neuefische.ordermanagement.model.Product;
 
 import java.util.*;
@@ -8,7 +10,13 @@ import java.util.*;
 public class ProductDb {
     private final ArrayList<Product> products = new ArrayList<Product>();
 
-    public ProductDb(Collection<Product> products) {
+    public ProductDb() {
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Perischable(1,"Gurke"));
+        products.add(new Perischable(2,"Sardine"));
+        products.add(new Perischable(3,"Käse"));
+        products.add(new Perischable(4,"Milch"));
+        products.add(new NonPerishable(5,"Wasser"));
         this.products.addAll(products);
     }
 

@@ -2,22 +2,16 @@ package de.neuefische.ordermanagement.model;
 
 import java.util.Objects;
 
-public interface Product {
-
-    int getId();
-    void setId(int id);
-    String getName();
-    void setName(String name);
-    String toString();
-
-    /*private int id;
+public class Perischable implements Product {
+    private int id;
     private String name;
 
-    public Product(int id, String name) {
+    public Perischable(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
+    @Override
     public int getId() {
         return id;
     }
@@ -26,6 +20,7 @@ public interface Product {
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
@@ -36,7 +31,7 @@ public interface Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Perischable{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
@@ -46,13 +41,13 @@ public interface Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return id == product.id &&
-                Objects.equals(name, product.name);
+        Perischable that = (Perischable) o;
+        return id == that.id &&
+                Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
-    }*/
+    }
 }

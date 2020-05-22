@@ -12,8 +12,7 @@ public class OrderDb {
 
     private ArrayList<Order> orders = new ArrayList<Order>();
 
-    public OrderDb(ArrayList<Order> orders) {
-        this.orders = orders;
+    public OrderDb() {
     }
 
     public Collection<Order> listOrders() {
@@ -37,4 +36,10 @@ public class OrderDb {
         this.orders.add(order);
     }
 
+    @Override
+    public String toString() {
+        return "OrderDb{" +
+                "orders=" + orders +
+                '}';
+    }
 }

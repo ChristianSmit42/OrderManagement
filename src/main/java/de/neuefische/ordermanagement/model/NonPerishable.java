@@ -2,41 +2,38 @@ package de.neuefische.ordermanagement.model;
 
 import java.util.Objects;
 
-public interface Product {
-
-    int getId();
-    void setId(int id);
-    String getName();
-    void setName(String name);
-    String toString();
-
-    /*private int id;
+public class NonPerishable implements Product {
+    private int id;
     private String name;
 
-    public Product(int id, String name) {
+    public NonPerishable(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
+    @Override
     public int getId() {
         return id;
     }
 
+    @Override
     public void setId(int id) {
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "NonPerishable{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
@@ -46,13 +43,13 @@ public interface Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return id == product.id &&
-                Objects.equals(name, product.name);
+        NonPerishable that = (NonPerishable) o;
+        return id == that.id &&
+                Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
-    }*/
+    }
 }

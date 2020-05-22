@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Order {
-    int id;
-    ArrayList<Product> products = new ArrayList<Product>();
+    private int id;
+    private ArrayList<Product> products = new ArrayList<Product>();
 
     public Order(int id, ArrayList<Product> products) {
         this.id = id;
